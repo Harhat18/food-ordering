@@ -1,17 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       container: {
-        screnns: {
+        screens: {
           xs: "375px",
           sm: "640px",
           md: "768px",
@@ -23,6 +19,8 @@ module.exports = {
       colors: {
         primary: "#ffbe33",
         secondary: "#222831",
+        danger: "#ff0000",
+        success: "#00ff00",
       },
       fontFamily: {
         dancing: ["Dancing Script", "cursive"],
