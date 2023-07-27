@@ -1,7 +1,7 @@
 import React from "react";
 
-const Index = () => {
-  return <div className="text-red-600 font-dancing "></div>;
+const Index = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 export default Index;
