@@ -1,15 +1,22 @@
 import Head from "next/head";
+import Header from "../components/layout/Header";
+import Home from "./home";
 
-export default function Home() {
+export default function Index() {
   return (
     <div className="">
       <Head>
-        <title>Food Order</title>
-        <meta name="description" content="Food Order" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
       </Head>
-      <h1 className="text-center h-screen bg-primary">Food Order</h1>
+      <Header />
+      <Home />
     </div>
   );
 }
