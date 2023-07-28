@@ -26,6 +26,7 @@ const Customers = () => {
       </button>
     );
   }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -46,10 +47,10 @@ const Customers = () => {
       },
     ],
   };
-  return (
-    <div className="container mx-auto my-20">
-      <Title addClass="text-[40px] text-center">What Says Our Customers</Title>
 
+  return (
+    <div className="container mx-auto mb-20 mt-12">
+      <Title addClass="text-[40px] text-center">What Says Our Customers</Title>
       <Slider {...settings}>
         <CustomerItem imgSrc="/images/client1.jpg" />
         <CustomerItem imgSrc="/images/client2.jpg" />
