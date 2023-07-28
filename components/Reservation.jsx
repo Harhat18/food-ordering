@@ -20,21 +20,22 @@ const Reservation = () => {
       id: 3,
       name: "email",
       type: "email",
-      placeholder: "Your Email Adress",
+      placeholder: "Your Email Address",
     },
     {
       id: 4,
-      name: "Persons",
+      name: "persons",
       type: "number",
       placeholder: "How Many Persons?",
     },
     {
       id: 5,
-      name: "date",
+      name: "persons",
       type: "datetime-local",
       placeholder: "How Many Persons?",
     },
   ];
+
   return (
     <div className="container mx-auto py-12">
       <Title addClass="text-[40px] mb-10">Book A Table</Title>
@@ -60,5 +61,4 @@ const Reservation = () => {
     </div>
   );
 };
-
 export default Reservation;

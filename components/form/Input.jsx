@@ -7,14 +7,14 @@ const Input = (props) => {
       <label className="relative block cursor-text w-full">
         <input
           type={type}
-          className={`h-14 w-full border border-primary outline-none px-4 peer pt-2  ${
+          className={`h-14 w-full border border-primary outline-none px-4 peer ${
             type !== "datetime-local" && "pt-2"
           }`}
           required
           {...inputProps}
         />
         {type !== "datetime-local" && (
-          <span className="absolute top-0 left-0 px-4  text-primary text-sm flex items-center h-full peer-focus:h-7 peer-focus:text-xs peer-valid:h-7 peer-valid:text-xs transition-all">
+          <span className="absolute top-0 left-0 px-4 text-sm flex items-center h-full peer-focus:h-7 peer-focus:text-xs peer-valid:h-7 peer-valid:text-xs transition-all">
             {placeholder}
           </span>
         )}
@@ -22,5 +22,4 @@ const Input = (props) => {
     </div>
   );
 };
-
 export default Input;
