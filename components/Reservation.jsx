@@ -2,11 +2,13 @@ import React from "react";
 import Input from "./form/Input";
 import Title from "./ui/Title";
 import { useFormik } from "formik";
-import { reservationSchema } from "@/schema/reservation";
+import { reservationSchema } from "../schema/reservation";
+{
+}
 
 const Reservation = () => {
   const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 4000));
     actions.resetForm();
   };
 
@@ -19,11 +21,9 @@ const Reservation = () => {
         persons: "",
         date: "",
       },
-      validationSchema: reservationSchema,
       onSubmit,
+      validationSchema: reservationSchema,
     });
-
-  console.log(values);
 
   const inputs = [
     {
@@ -104,4 +104,5 @@ const Reservation = () => {
     </div>
   );
 };
+
 export default Reservation;

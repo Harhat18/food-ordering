@@ -1,23 +1,21 @@
 import React from "react";
+import About from "../../components/About";
+import Campaigns from "../../components/Campaigns";
 import Carousel from "../../components/Carousel";
-import Campaigns from "@/components/Campaigns";
-import MenuWrapper from "@/components/product/MenuWrapper";
-import About from "@/components/About";
-import Reservation from "@/components/Reservation";
-import Customers from "@/components/customers/Customers";
+import Customers from "../../components/customers/Customers";
+import MenuWrapper from "../../components/product/MenuWrapper";
+import Reservation from "../../components/Reservation";
 
-const Index = () => {
+const Index = ({ categoryList, productList }) => {
   return (
-    <div>
-      <React.Fragment>
-        <Carousel />
-        <Campaigns />
-        <MenuWrapper />
-        <About />
-        <Reservation />
-        <Customers />
-      </React.Fragment>
-    </div>
+    <React.Fragment>
+      <Carousel />
+      <Campaigns />
+      <MenuWrapper categoryList={categoryList} productList={productList} />
+      <About />
+      <Reservation />
+      <Customers />
+    </React.Fragment>
   );
 };
 
