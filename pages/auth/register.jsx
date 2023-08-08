@@ -1,13 +1,22 @@
+import axios from "axios";
 import { useFormik } from "formik";
 import Link from "next/link";
-import Input from "../../components/form/Input";
-import Title from "../../components/ui/Title";
-import { registerSchema } from "../../schema/register";
+
+import { registerSchema } from "@/schema/register";
+import Title from "@/components/ui/Title";
+import Input from "@/components/form/Input";
 
 const Register = () => {
   const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 4000));
-    actions.resetForm();
+    try {
+      const res = awai t axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/users/register`,
+        values
+      );
+    } catch (err) {
+      console.log(err);
+    }
+    /* actions.resetForm(); */
   };
   const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
     useFormik({
@@ -78,7 +87,9 @@ const Register = () => {
           ))}
         </div>
         <div className="flex flex-col w-full gap-y-3 mt-6">
-          <button className="btn-primary">REGISTER</button>
+          <button className="btn-primary" type="submit">
+            REGISTER
+          </button>
           <Link href="/auth/login">
             <span className="text-sm underline cursor-pointer text-secondary">
               Do you have a account?
