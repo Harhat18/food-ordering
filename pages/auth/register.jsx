@@ -9,7 +9,7 @@ import Input from "@/components/form/Input";
 const Register = () => {
   const onSubmit = async (values, actions) => {
     try {
-      const res = awai t axios.post(
+      const res = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/users/register`,
         values
       );
